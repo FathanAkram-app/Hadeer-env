@@ -1,0 +1,16 @@
+.logincard{
+    padding: 2px;
+    width: 400px;
+    height: 100vh;
+    position: fixed;
+
+}
+
+.form{
+    margin: 8px;
+    padding-top: 12px;
+}
+
+.formgroup{
+    margin: 4px;
+}
