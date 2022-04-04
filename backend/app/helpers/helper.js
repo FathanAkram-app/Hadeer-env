@@ -57,7 +57,7 @@ module.exports = {
     },
     clientAuthentication : (req)=>{
         if (req.headers.authorization != null) {
-            return JSON.parse(Buffer.from(req.headers.authorization, 'base64').toString('ascii')).serverkey == version["serverkey"]    
+            return JSON.parse(Buffer.from(req.headers.authorization, 'base64').toString('ascii')).serverkey == process.env.API_KEY    
         }else{
             return false
         }

@@ -19,6 +19,7 @@ services:
       DB_NAME : ujikom
       DB_PASS : 123
       DB_PORT : 5432
+      API_KEY : B1smill4hUJIKOM
   service2:
     image: node-app
     build: ./backend
@@ -30,6 +31,7 @@ services:
       DB_NAME : ujikom
       DB_PASS : 123
       DB_PORT : 5432
+      API_KEY : B1smill4hUJIKOM
   service3:
     image: node-app
     build: ./backend
@@ -41,6 +43,7 @@ services:
       DB_NAME : ujikom
       DB_PASS : 123
       DB_PORT : 5432
+      API_KEY : B1smill4hUJIKOM
   db_postgresql:
     image: postgres
     container_name: db_postgresql
