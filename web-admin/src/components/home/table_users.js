@@ -98,7 +98,7 @@ const TrUsers = (props)=>{
                 <Button style={{margin:"0"}}variant="warning" onClick={()=>{
                     props.setSaveButtonState(1)
                     props.setDataForms(data)
-                    props.setModalElements(modalForms(data,"Edit User",props.setDataForms,props.dataForms))
+                    props.setModalElements(modalForms(data,"Edit User",props.setDataForms,data))
                     props.setShowModal(true)
                 }}> edit</Button>
                 <Button style={{margin:"0"}}variant="danger" onClick={(e)=>{

@@ -35,7 +35,7 @@ export const modalForms = (inputs,type,setDataForms,dataForms)=>{
     var arr = []
     arr.push(<h1 key="header">{type}</h1>)
     for (var key in inputs) {
-        setDataForms((v)=>valueForm(key,inputs,v))
+        
         if (key !== "id" && key !== "nama_guru") {
             const ip = (key !=="waktu" && key !== "jampelajaran" ?(key!=="password" ? "text" : "password") : "time" )
             var i = null
@@ -58,6 +58,7 @@ export const modalForms = (inputs,type,setDataForms,dataForms)=>{
                 
             }
         }
+        setDataForms((v)=>valueForm(key,inputs,v))
         
     }
     return (
