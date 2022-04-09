@@ -2,7 +2,7 @@ import { tokenCookies } from '../components/helper_components/authentication';
 
 const axios = require('axios').default;
 // fix
-const baseUrl = "http://localhost"
+const baseUrl = "http://192.168.21.154"
 // Make a request for a user with a given ID
 export const getPelajaran = (setList,keywords)=>{
     axios.get(baseUrl+'/api/getpelajaran?search='+keywords)

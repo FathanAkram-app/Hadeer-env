@@ -6,11 +6,19 @@ services:
     volumes:
       - './nginx/nginx.conf:/etc/nginx/nginx.conf'
     ports:
-      - '4000:4000'
       - '80:8080'
+  websocket_server:
+    image: node-app
+    build: ./backend-websocket
+    ports:
+      - '8020:8010'
+    environment: 
+      APPID : websocket
+      PORT : 8010
+      
   service1:
     image: node-app
-    build: ./backend
+    build: ./backend-api
     environment: 
       APPID : backend_service1
       PORT : 1111
@@ -22,7 +30,7 @@ services:
       API_KEY : B1smill4hUJIKOM
   service2:
     image: node-app
-    build: ./backend
+    build: ./backend-api
     environment: 
       APPID : backend_service2
       PORT : 2222
@@ -34,7 +42,7 @@ services:
       API_KEY : B1smill4hUJIKOM
   service3:
     image: node-app
-    build: ./backend
+    build: ./backend-api
     environment: 
       APPID : backend_service3
       PORT : 3333
