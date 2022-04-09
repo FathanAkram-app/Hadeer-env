@@ -49,6 +49,7 @@ export const TableUsers = (props)=>{
                             <Button style={{margin:"0"}}variant="primary" onClick={()=>{
                                 props.setModalElements(modalForms({username:"",email:"", roles:"", nama:"", kelas:"",password:""},"Tambah User",props.setDataForms,props.dataForms))
                                 props.setShowModal(true)
+                                props.setSaveButtonState(0)
                             }}>Tambah User</Button>
                         </th>
                         
